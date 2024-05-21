@@ -30,9 +30,11 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         //load the values from secrets.properties file
-        val keystoreFile = project.rootProject.file("config.properties")
+        val config = project.rootProject.file("config.properties")
+        val secrets = project.rootProject.file("secrets.properties")
         val properties = Properties()
-        properties.load(keystoreFile.inputStream())
+        properties.load(config.inputStream())
+        properties.load(secrets.inputStream())
 
         //return empty key in case something goes wrong
         val apiKey = properties.getProperty("TMDB_API_KEY") ?: ""
