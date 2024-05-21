@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="spacing_4">16dp</dimen>
+    <dimen name="spacing_2">8dp</dimen>
+    <dimen name="spacing_1">4dp</dimen>
+    <dimen name="movie_detail_banner_size">600dp</dimen>
+    <dimen name="movie_detail_poster_size">200dp</dimen>
+    <dimen name="movie_search_poster_size">100dp</dimen>
+</resources>

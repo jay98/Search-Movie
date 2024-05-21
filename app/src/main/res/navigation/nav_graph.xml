@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/navigation_trending">
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.searchmovie.ui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_navigation_search_to_movieDetailsFragment"
+            app:destination="@id/navigation_movie_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_trending"
+        android:name="com.example.searchmovie.ui.trending.TrendingFragment"
+        android:label="Trending"
+        tools:layout="@layout/fragment_trending">
+        <action
+            android:id="@+id/action_navigation_trending_to_movieDetailsFragment"
+            app:destination="@id/navigation_movie_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_movie_details"
+        android:name="com.example.searchmovie.ui.moviedetail.MovieDetailsFragment"
+        android:label="fragment_movie_deatils"
+        tools:layout="@layout/fragment_movie_deatils">
+        <argument
+            android:name="movie"
+            app:argType="com.example.searchmovie.domain.models.Movie" />
+    </fragment>
+</navigation>

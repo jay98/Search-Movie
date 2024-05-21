@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movieData"
+            type="com.example.searchmovie.domain.models.Movie" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/moviesAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:expandedTitleTextAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:title="@{movieData.name}">
+
+                <ImageView
+                    android:id="@+id/movieImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/movie_detail_banner_size"
+                    android:foreground="@drawable/movie_detail_title_background"
+                    android:importantForAccessibility="no"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_collapseMode="none" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fitsSystemWindows="true"
+                    app:layout_collapseMode="pin"
+                    app:title="@{movieData.name}" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/movieDetailsScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".ui.moviedetail.MovieDetailsFragment">
+
+            <TextView
+                android:id="@+id/movieDescription"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_2"
+                android:text="@{movieData.description}"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum, felis quis convallis porttitor, dolor quam vestibulum diam, id ullamcorper diam erat ac magna. Nulla consequat bibendum volutpat. Vestibulum ac massa odio. Sed tempus gravida enim quis lacinia. Aliquam erat volutpat. Nulla sapien lacus, gravida sed hendrerit vel, lacinia vel ante. Donec fringilla leo ligula, nec efficitur." />
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,8 @@
+<resources>
+    <attr name="colorBlack" format="color" />
+    <attr name="colorOnBlack" format="color" />
+    <attr name="colorBlackContainer" format="color" />
+    <attr name="colorOnBlackContainer" format="color" />
+    <attr name="textBlockStyle" format="reference"/>
+
+</resources>

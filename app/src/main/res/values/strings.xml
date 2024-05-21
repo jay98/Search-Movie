@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> Search Movies</string>
+    <string name="title_home">Trending</string>
+    <string name="trending_today">Trending Today</string>
+    <string name="title_search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_movies">Search Movies</string>
+    <string name="trending_movies">Trending Movies</string>
+    <string name="retry">Retry fetch</string>
+</resources>
