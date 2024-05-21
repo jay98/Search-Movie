@@ -1,4 +1,8 @@
 # Search-Movie
 
-1. Pre-Requisite 
-Create a new file called `config.propperties` and add the following to it 
+## Pre-Requisite
+Create a new file called `secrets.propperties` and add the api key as follows
+
+    TMDB_API_KEY="{api_key}"
+
+
