@@ -31,7 +31,7 @@ https://github.com/jay98/Search-Movie/assets/23137381/2feb434e-6a6d-4d00-8091-7f
 4. Display trending movies for both the day and the month.
 
 ### Engineering Improvements
-1. Find a better or lower res gif for top image view ( that's taking a perfor mance hit )
+1. Find a better or lower res gif for top image view ( that's taking a performance hit )
 2. Improve server configuration handling to dynamically fetch different image sizes based on device
    size.
 3. Set up more robust toolbars and better handle insets.
