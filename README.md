@@ -15,6 +15,7 @@ TMDB_API_KEY="{api_key}"
 2. **Loading Indicator**: Added for search operations.
 3. **Infinite Scroll**: Implemented for both search results and trending movies with a retry button
    for failed loading attempts.
+4. **Swipe to Refresh**: Implemented for trending movies screen
 
 ## Potential Future Enhancements
 
