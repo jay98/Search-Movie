@@ -8,6 +8,10 @@ Create a new file called `secrets.properties` and add the API key:
 TMDB_API_KEY="{api_key}"
 ```
 
+### Mini Demo ( Doesn't show all the edge cases )
+
+https://github.com/jay98/Search-Movie/assets/23137381/2feb434e-6a6d-4d00-8091-7f26f3f3096a
+
 ## Modifications from Existing Design
 
 1. **Search Results**: Includes a title and part of the overview in addition to the backdrop,
@@ -40,3 +44,7 @@ TMDB_API_KEY="{api_key}"
 1. Add scenario tests.
 2. Set up a mock data provider for tests instead of hardcoding data.
 3. Make unit tests more comprehensive.
+
+
+
+
