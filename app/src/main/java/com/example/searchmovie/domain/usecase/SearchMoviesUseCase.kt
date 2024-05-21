@@ -11,8 +11,7 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class SearchMoviesUseCase @Inject constructor(
-    private val movieRepository: MovieRepository,
-    private val configManager: ConfigManager
+    private val movieRepository: MovieRepository, private val configManager: ConfigManager
 ) {
     operator fun invoke(query: String): Flow<PagingData<Movie>> =
         movieRepository.searchMovies(query).map {

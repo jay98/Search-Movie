@@ -2,19 +2,15 @@ package com.example.searchmovie.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.navigation.NavDirections
-import androidx.navigation.fragment.findNavController
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.searchmovie.R
 import com.example.searchmovie.databinding.SearchListItemBinding
 import com.example.searchmovie.domain.models.Movie
 import com.example.searchmovie.ui.search.SearchFragmentDirections
-import com.google.android.material.circularreveal.cardview.CircularRevealCardView
 
 class SearchMoviesPagingAdapter(val navController: NavController) :
     PagingDataAdapter<Movie, SearchMoviesPagingAdapter.SearchResultViewHolder>(MovieDiffCallback()) {

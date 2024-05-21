@@ -11,8 +11,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
-import coil.load
-import com.example.searchmovie.R
 import com.example.searchmovie.databinding.FragmentSearchBinding
 import com.example.searchmovie.ui.adapter.SearchMoviesPagingAdapter
 import dagger.hilt.android.AndroidEntryPoint

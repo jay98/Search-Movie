@@ -11,13 +11,11 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class FetchTendingMoviesUseCase @Inject constructor(
-    private val movieRepository: MovieRepository,
-    private val configManager: ConfigManager
+    private val movieRepository: MovieRepository, private val configManager: ConfigManager
 ) {
-    operator fun invoke(): Flow<PagingData<Movie>> =
-        movieRepository.getTrendingMovies().map {
-            it.map { movieResponse ->
-                movieResponse.toMovie(configManager.getConfig())
-            }
+    operator fun invoke(): Flow<PagingData<Movie>> = movieRepository.getTrendingMovies().map {
+        it.map { movieResponse ->
+            movieResponse.toMovie(configManager.getConfig())
         }
+    }
 }

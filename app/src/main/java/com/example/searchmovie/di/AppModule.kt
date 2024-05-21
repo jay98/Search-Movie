@@ -21,10 +21,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-    private val retrofitInstance = Retrofit.Builder()
-        .baseUrl(BuildConfig.BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
+    private val retrofitInstance = Retrofit.Builder().baseUrl(BuildConfig.BASE_URL)
+        .addConverterFactory(GsonConverterFactory.create()).build()
 
     @Provides
     @Singleton

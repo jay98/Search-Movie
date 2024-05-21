@@ -9,8 +9,7 @@ import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
 class InitializeConfigUseCase @Inject constructor(
-    private val configRepository: ConfigRepository,
-    private val configManager: ConfigManager
+    private val configRepository: ConfigRepository, private val configManager: ConfigManager
 ) {
     suspend operator fun invoke() {
         configRepository.getConfig().flowOn(Dispatchers.IO).collectLatest {

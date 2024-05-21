@@ -24,9 +24,7 @@ class MovieDetailsFragment : Fragment() {
     private val args: MovieDetailsFragmentArgs by navArgs()
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMovieDeatilsBinding.inflate(inflater, container, false)
         return binding.root
@@ -39,9 +37,7 @@ class MovieDetailsFragment : Fragment() {
             findNavController().graph
         )
         binding.collapsingToolbar.setupWithNavController(
-            binding.toolbar,
-            findNavController(),
-            appBarConfiguration
+            binding.toolbar, findNavController(), appBarConfiguration
         )
         setupViews()
     }

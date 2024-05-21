@@ -1,8 +1,6 @@
 package com.example.searchmovie.domain.repository
 
-import android.graphics.Movie
 import androidx.paging.PagingData
-import com.example.searchmovie.data.remote.models.MoviePageResponse
 import com.example.searchmovie.data.remote.models.MovieResponse
 import kotlinx.coroutines.flow.Flow
 

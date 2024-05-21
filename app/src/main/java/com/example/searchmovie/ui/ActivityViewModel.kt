@@ -11,7 +11,7 @@ import javax.inject.Inject
 @HiltViewModel
 class ActivityViewModel @Inject constructor(
     private val initializeConfigUseCase: InitializeConfigUseCase,
-    private val configManager: ConfigManager
+    configManager: ConfigManager
 ) : ViewModel() {
 
     var isReady = false

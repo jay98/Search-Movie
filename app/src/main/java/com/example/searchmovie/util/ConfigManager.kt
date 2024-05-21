@@ -2,7 +2,6 @@ package com.example.searchmovie.util
 
 import android.content.Context
 import android.content.SharedPreferences
-import androidx.annotation.OpenForTesting
 import com.example.searchmovie.domain.models.Config
 import com.google.gson.Gson
 import javax.inject.Inject
@@ -26,9 +25,7 @@ class ConfigManager @Inject constructor(private val gson: Gson) {
     fun setConfig(newConfig: Config?) {
         if (!isInit) throwUnInitException()
         config = newConfig
-        prefs.edit()
-            .putString(CONFIG_KEY, gson.toJson(newConfig))
-            .apply()
+        prefs.edit().putString(CONFIG_KEY, gson.toJson(newConfig)).apply()
 
     }
 

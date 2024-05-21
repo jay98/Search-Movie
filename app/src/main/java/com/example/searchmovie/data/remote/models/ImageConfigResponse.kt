@@ -2,7 +2,7 @@ package com.example.searchmovie.data.remote.models
 
 import com.google.gson.annotations.SerializedName
 
-data class ImageConfigResponse (
+data class ImageConfigResponse(
     @SerializedName("base_url")
     val baseUrl: String,
     @SerializedName("secure_base_url")

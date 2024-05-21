@@ -16,8 +16,7 @@ class LoadMoreStateAdapter(private val retry: () -> Unit) :
     }
 
     override fun onCreateViewHolder(
-        parent: ViewGroup,
-        loadState: LoadState
+        parent: ViewGroup, loadState: LoadState
     ): LoadMoreStateViewHolder {
         val binding =
             ItemLoadStateBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -26,8 +25,7 @@ class LoadMoreStateAdapter(private val retry: () -> Unit) :
 
 
     inner class LoadMoreStateViewHolder(
-        private val binding: ItemLoadStateBinding,
-        retry: () -> Unit
+        private val binding: ItemLoadStateBinding, retry: () -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.refreshButton.setOnClickListener {

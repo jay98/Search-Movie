@@ -9,10 +9,8 @@ import java.io.IOException
 import javax.net.ssl.SSLHandshakeException
 
 class SearchMoviesPagingSource(
-    private val movieApiService: MovieApiService,
-    private val query: String
-) :
-    PagingSource<Int, MovieResponse>() {
+    private val movieApiService: MovieApiService, private val query: String
+) : PagingSource<Int, MovieResponse>() {
     override fun getRefreshKey(state: PagingState<Int, MovieResponse>): Int? {
         // We need to get the previous key (or next key if previous is null) of the page
         // that was closest to the most recently accessed index.

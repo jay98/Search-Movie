@@ -13,15 +13,13 @@ import kotlinx.coroutines.flow.flatMapLatest
 import javax.inject.Inject
 
 @HiltViewModel
-class SearchViewModel @Inject constructor(searchMoviesUseCase: SearchMoviesUseCase) :
-    ViewModel() {
+class SearchViewModel @Inject constructor(searchMoviesUseCase: SearchMoviesUseCase) : ViewModel() {
     val searchQuery: MutableStateFlow<String> = MutableStateFlow(EMPTY_SEARCH_QUERY)
 
 
     @OptIn(ExperimentalCoroutinesApi::class, FlowPreview::class)
-    val searchResult =
-        searchQuery.debounce(SEARCH_DELAY)
-            .flatMapLatest { searchMoviesUseCase(it) }.cachedIn(viewModelScope)
+    val searchResult = searchQuery.debounce(SEARCH_DELAY).flatMapLatest { searchMoviesUseCase(it) }
+        .cachedIn(viewModelScope)
 
     companion object {
         private const val SEARCH_DELAY = 500L
