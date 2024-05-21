@@ -104,7 +104,6 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.transition.ktx)
     implementation(libs.io.coil.ktx)
-    implementation(libs.io.coil.gif.ktx)
 
 
     testImplementation(libs.junit)
