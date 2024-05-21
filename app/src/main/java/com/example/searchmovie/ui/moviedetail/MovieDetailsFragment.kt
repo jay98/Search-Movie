@@ -54,6 +54,7 @@ class MovieDetailsFragment : Fragment() {
 
     private fun setupViews() {
         binding.apply {
+            // Not using binding adapter since we want different behavior for different image views
             movieImage.load(args.movie.backdropPath) {
                 placeholder(R.drawable.loading)
                 crossfade(true)

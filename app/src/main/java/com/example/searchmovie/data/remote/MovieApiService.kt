@@ -6,6 +6,8 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface MovieApiService {
+
+    // Assuming US audience hence keeping language only english
     @GET("trending/movie/day?language=en-US")
     suspend fun getTrendingMovies(
         @Query("page") page: Int,

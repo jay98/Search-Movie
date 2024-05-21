@@ -11,6 +11,8 @@ data class ConfigResponse(
         private const val POSTER_IMAGE_INDEX = 2
         private const val POSTER_DEFAULT_SIZE = "w154"
 
+        // Ideally these would be done in specific transformers and those transformers
+        // would be unit tested but to keep things simple going with this pattern
         fun ConfigResponse.toConfig(): Config {
             return Config(
                 imageBaseUrl = images.secureBaseUrl,

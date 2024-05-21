@@ -14,12 +14,17 @@ class MovieRepositoryImpl(
     private val movieApiService: MovieApiService,
 ) : MovieRepository {
     override fun getTrendingMovies(): Flow<PagingData<MovieResponse>> = Pager(config = PagingConfig(
-        pageSize = 20, enablePlaceholders = false
+        pageSize = PAGE_SIZE, enablePlaceholders = false
     ), pagingSourceFactory = { TrendingMoviesPagingSource(movieApiService) }).flow
 
     override fun searchMovies(query: String): Flow<PagingData<MovieResponse>> =
         Pager(config = PagingConfig(
-            pageSize = 20, enablePlaceholders = false
+            pageSize = PAGE_SIZE, enablePlaceholders = false
         ), pagingSourceFactory = { SearchMoviesPagingSource(movieApiService, query) }).flow
+
+    companion object {
+        // based on TMBD default page size
+        private const val PAGE_SIZE = 20
+    }
 }
 

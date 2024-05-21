@@ -8,6 +8,9 @@ import com.google.gson.Gson
 import javax.inject.Inject
 import javax.inject.Singleton
 
+
+// Basically a wrapper to store and fetch config in sharedpref. Ideally would store in db using
+// Room or if we want something like Paper
 @Singleton
 class ConfigManager @Inject constructor(private val gson: Gson) {
 

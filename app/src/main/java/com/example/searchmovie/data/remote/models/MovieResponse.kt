@@ -22,6 +22,9 @@ data class MovieResponse(
     val voteCount: Int
 )
 
+
+// Ideally these would be done in specific transformers and those transformers
+// would be unit tested but to keep things simple going with this pattern
 fun MovieResponse.toMovie(config: Config?): Movie = Movie(
     id = id,
     backdropPath = config?.let { config.imageBaseUrl + config.backDropSize + backdropPath }

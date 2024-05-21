@@ -23,6 +23,8 @@ import kotlinx.coroutines.launch
 class SearchFragment : Fragment() {
 
     private var _binding: FragmentSearchBinding? = null
+
+    // Only accessible from onCreateView to onStop and not a lateinit to avoid memory leaks
     private val binding get() = _binding!!
 
     private val viewModel: SearchViewModel by viewModels()

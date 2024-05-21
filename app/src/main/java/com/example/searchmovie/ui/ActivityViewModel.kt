@@ -5,8 +5,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.searchmovie.domain.usecase.InitializeConfigUseCase
 import com.example.searchmovie.util.ConfigManager
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -14,8 +12,7 @@ import javax.inject.Inject
 class ActivityViewModel @Inject constructor(
     private val initializeConfigUseCase: InitializeConfigUseCase,
     private val configManager: ConfigManager
-) :
-    ViewModel() {
+) : ViewModel() {
 
     var isReady = false
 
