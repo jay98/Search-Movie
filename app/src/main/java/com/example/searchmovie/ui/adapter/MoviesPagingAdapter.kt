@@ -35,7 +35,7 @@ class MoviesPagingAdapter(val navController: NavController) :
         fun bind(movie: Movie) {
             binding.apply {
                 movieImage.load(movie.posterPath) {
-                    placeholder(R.drawable.loading)
+                    placeholder(R.drawable.loading_small)
                 }
                 moviePoster.transitionName = movie.id.toString()
                 moviePoster.setOnClickListener {
